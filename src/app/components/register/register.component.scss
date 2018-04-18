@@ -1,0 +1,15 @@
+.register-box {
+  background: lightgray;
+  padding: 15px;
+  color: white;
+
+  &:hover {
+    border: 2px solid darkblue;
+    cursor: pointer;
+  }
+}
+
+.active {
+  border: 2px solid darkblue;
+  background: darkblue;
+}

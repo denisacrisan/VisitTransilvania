@@ -1,0 +1,246 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <div id="individ" class="col-md-12 register-box" [ngClass]="{'active': selectedItem === 'item1'}" (click)="selectedItem = 'item1'">
+        <h2> I AM AN INDIVIDUAL </h2>
+        <h6> Looking for a place to stay </h6>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div id="house" class="col-md-12 register-box" [ngClass]="{'active': selectedItem === 'item2'}" (click)="selectedItem = 'item2'">
+        <h2> I AM A GUEST HOUSE </h2>
+        <h6> Looking for visitors </h6>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="login-box" [hidden]="selectedItem !== 'item1'">
+    <div class="container">
+      <div class="card col-md-6 mt-3 mx-auto">
+        <div class="card-body">
+          <form (ngSubmit)="register()" [formGroup]="registerForm" novalidate>
+            <div class="form-group">
+              <label class="d-block">
+                <input type="text" class="form-control" formControlName="firstName"
+                       [placeholder]="'First Name'"/>
+                <span hidden translate> First Name </span>
+                <small [hidden]="registerForm.controls.firstName.valid || registerForm.controls.firstName.untouched"
+                       class="text-danger" translate>
+                  First Name is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="text" class="form-control" formControlName="lastName"
+                       [placeholder]="'Last Name'"/>
+                <span hidden translate> Last Name </span>
+                <small [hidden]="registerForm.controls.lastName.valid || registerForm.controls.lastName.untouched"
+                       class="text-danger" translate>
+                  Last Name is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="text" class="form-control" formControlName="email"
+                       [placeholder]="'Email'"/>
+                <span hidden translate> Email </span>
+                <small [hidden]="registerForm.controls.email.valid || registerForm.controls.email.untouched"
+                       class="text-danger" translate>
+                  Email is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="tel" class="form-control" formControlName="phone"
+                       [placeholder]="'Phone'"/>
+                <span hidden translate> Phone </span>
+                <small [hidden]="registerForm.controls.phone.valid || registerForm.controls.phone.untouched"
+                       class="text-danger" translate>
+                  Phone is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="password" class="form-control" formControlName="password"
+                       [placeholder]="'Password'"/>
+                <span hidden translate> Password </span>
+                <small [hidden]="registerForm.controls.password.valid || registerForm.controls.password.untouched"
+                       class="text-danger" translate>
+                  Password is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="password" class="form-control" formControlName="confirmPassword"
+                       [placeholder]="'Confirm Password'"/>
+                <span hidden translate> Confirm Password </span>
+                <small [hidden]="registerForm.controls.confirmPassword.valid || registerForm.controls.confirmPassword.untouched"
+                       class="text-danger" translate>
+                  Password confirmation is required
+                </small>
+              </label>
+            </div>
+
+
+
+            <button class="btn btn-primary w-100" type="submit" [disabled]="registerForm.invalid || isLoading">
+              <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+              <span translate> Sign up </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="login-box" [hidden]="selectedItem !== 'item2'">
+    <div class="container">
+      <div class="card col-md-6 mt-3 mx-auto">
+        <div class="card-body">
+          <form (ngSubmit)="register()" [formGroup]="registerFormGH" novalidate>
+            <div class="form-group">
+              <label class="d-block">
+                <input type="text" class="form-control" formControlName="firstName"
+                       [placeholder]="'First Name'"/>
+                <span hidden translate> First Name </span>
+                <small [hidden]="registerFormGH.controls.firstName.valid || registerFormGH.controls.firstName.untouched"
+                       class="text-danger" translate>
+                  First Name is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="text" class="form-control" formControlName="lastName"
+                       [placeholder]="'Last Name'"/>
+                <span hidden translate> Last Name </span>
+                <small [hidden]="registerFormGH.controls.lastName.valid || registerFormGH.controls.lastName.untouched"
+                       class="text-danger" translate>
+                  Last Name is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="text" class="form-control" formControlName="email"
+                       [placeholder]="'Email'"/>
+                <span hidden translate> Email </span>
+                <small [hidden]="registerFormGH.controls.email.valid || registerFormGH.controls.email.untouched"
+                       class="text-danger" translate>
+                  Email is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="tel" class="form-control" formControlName="phone"
+                       [placeholder]="'Phone'"/>
+                <span hidden translate> Phone </span>
+                <small [hidden]="registerFormGH.controls.phone.valid || registerFormGH.controls.phone.untouched"
+                       class="text-danger" translate>
+                  Phone is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="text" class="form-control" formControlName="hotelName"
+                       [placeholder]="'Guest House Name'"/>
+                <span hidden translate> Guest House Name </span>
+                <small [hidden]="registerFormGH.controls.hotelName.valid || registerFormGH.controls.hotelName.untouched"
+                       class="text-danger" translate>
+                  Guest House Name is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="text" class="form-control" formControlName="website"
+                       [placeholder]="'Website'"/>
+                <span hidden translate> Website </span>
+                <small [hidden]="registerFormGH.controls.website.valid || registerFormGH.controls.website.untouched"
+                       class="text-danger" translate>
+                  Website is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="text" class="form-control" formControlName="county"
+                       [placeholder]="'County'"/>
+                <span hidden translate> County </span>
+                <small [hidden]="registerFormGH.controls.county.valid || registerFormGH.controls.county.untouched"
+                       class="text-danger" translate>
+                  County is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="text" class="form-control" formControlName="city"
+                       [placeholder]="'City'"/>
+                <span hidden translate> City </span>
+                <small [hidden]="registerFormGH.controls.city.valid || registerFormGH.controls.city.untouched"
+                       class="text-danger" translate>
+                  City is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="password" class="form-control" formControlName="password"
+                       [placeholder]="'Password'"/>
+                <span hidden translate> Password </span>
+                <small [hidden]="registerFormGH.controls.password.valid || registerFormGH.controls.password.untouched"
+                       class="text-danger" translate>
+                  Password is required
+                </small>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="d-block">
+                <input type="password" class="form-control" formControlName="confirmPassword"
+                       [placeholder]="'Confirm Password'"/>
+                <span hidden translate> Confirm Password </span>
+                <small [hidden]="registerFormGH.controls.confirmPassword.valid || registerFormGH.controls.confirmPassword.untouched"
+                       class="text-danger" translate>
+                  Password confirmation is required
+                </small>
+              </label>
+            </div>
+
+            <button class="btn btn-primary w-100" type="submit" [disabled]="registerFormGH.invalid || isLoading">
+              <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+              <span translate> Sign up </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
