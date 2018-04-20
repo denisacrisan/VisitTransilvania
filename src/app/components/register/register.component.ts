@@ -11,6 +11,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   isLoading = false;
+  selectedItem: string;
   registerForm: FormGroup;
   registerFormGH: FormGroup;
 

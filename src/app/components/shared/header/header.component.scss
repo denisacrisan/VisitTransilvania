@@ -2,8 +2,43 @@
 
 .navbar {
   margin-bottom: $spacer;
+  background: #87CEFA;
 }
 
 .nav-link.dropdown-toggle {
   cursor: pointer;
+}
+header {
+  margin-bottom: -20px;
+}
+
+.nav {
+  width: 100%;
+  height: 50px;
+}
+
+.nav a {
+  transition: 0.4s;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0 10px;
+  margin: 0 10px;
+  text-align:center;
+}
+
+.nav a:hover {
+  background-color: #4386C9;
+  color: #ffffff;
+  padding: 11px 10px;
+  font-size: 18px;
+}
+
+.nav li {
+  top:0px;
+  float: left;
+  position: relative;
+  margin:auto;
+  display:inline-block;
+  text-align: center;
 }

@@ -7,3 +7,132 @@ q {
   font-size: 1.2rem;
   quotes: "« " " »";
 }
+
+.land {
+  fill: #ccc;
+  fill-opacity: 1;
+  stroke: white;
+  stroke-opacity: 1;
+  stroke-width: 0.5;
+}
+
+.county {
+  &:hover {
+    fill: #87CEFA;
+    cursor: pointer;
+  }
+}
+
+.county:hover ~ .introText {
+  display: none;
+}
+
+.description-modal {
+  margin-top: 50px;
+  width: 350px;
+  height: 350px;
+  background: lightgray;
+}
+
+.alba, .sibiu, .cluj, .satuMare, .maramures, .bistrita, .harghita, .mures, .covasna, .brasov, .hunedoara, .salaj, .bihor, .arad, .timis, .caras {
+  display: none;
+}
+
+
+#ROU294:hover ~ .alba {
+  display: block;
+}
+
+#ROU303:hover ~ .sibiu {
+  display: block;
+}
+
+#ROU276:hover ~ .arad {
+  display: block;
+}
+
+#ROU277:hover ~ .bihor {
+  display: block;
+}
+
+#ROU278:hover ~ .caras {
+  display: block;
+}
+
+#ROU280:hover ~ .timis {
+  display: block;
+}
+
+#ROU295:hover ~ .bistrita {
+  display: block;
+}
+
+#ROU296:hover ~ .cluj {
+   display: block;
+}
+
+#ROU297:hover ~ .hunedoara {
+  display: block;
+}
+
+#ROU298:hover ~ .maramures {
+  display: block;
+}
+
+#ROU299:hover ~ .mures {
+  display: block;
+}
+
+#ROU300:hover ~ .salaj {
+  display: block;
+}
+
+#ROU301:hover ~ .satuMare {
+  display: block;
+}
+
+#ROU305:hover ~ .brasov {
+  display: block;
+}
+
+#ROU306:hover ~ .covasna {
+  display: block;
+}
+
+#ROU307:hover ~ .harghita {
+  display: block;
+}
+
+
+
+.lessopacity {
+  opacity: 0.2;
+}
+
+.romMap {
+  transform: translate(2%, 0);
+}
+
+.boxDescription {
+  transform: translate(55%, 0);
+}
+
+.imagehomepage {
+  padding: 0;
+  margin-bottom: -30px;
+}
+
+.image-homepage {
+  background: url("transilvania.jpg");
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mapSection {
+  margin-top: 30px;
+  background: rgba(135,206,250,0.1);
+  padding: 30px 0;
+}

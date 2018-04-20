@@ -16,6 +16,7 @@ import { RegisterModule } from './components/register/register-module';
 import { LoginModule } from './components/login/login.module';
 import { ForgotPasswordModule } from './components/forgot-password/forgot-password.module';
 import { ResetPasswordModule } from './components/reset-password/reset-password.module';
+import { ContactModule } from './components/contact/contact.module';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +25,7 @@ import { ApiHandler } from './core/api-handler/apiHandler';
 import { HttpService } from './core/http/http.service';
 
 import { UserService } from '@app/core/user/user.service';
+
 
 
 @NgModule({
@@ -42,6 +44,7 @@ import { UserService } from '@app/core/user/user.service';
     RegisterModule,
     ForgotPasswordModule,
     ResetPasswordModule,
+    ContactModule,
     AppRoutingModule
   ],
   declarations: [AppComponent],

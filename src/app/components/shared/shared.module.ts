@@ -7,6 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ShellComponent } from './shell/shell.component';
 import { HeaderComponent } from './header/header.component';
 import { LoaderComponent } from './loader/loader.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { LoaderComponent } from './loader/loader.component';
   declarations: [
     ShellComponent,
     LoaderComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   exports: [
     ShellComponent,

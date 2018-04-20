@@ -4,6 +4,15 @@
  */
 
 // Theme variables, must be included before the libraries to allow overriding defaults
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+
 @import "theme/theme-variables";
 
 // 3rd party libraries
