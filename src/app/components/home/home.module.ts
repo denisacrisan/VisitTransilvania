@@ -7,6 +7,7 @@ import { SharedModule } from '@app/components/shared';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
+
 @NgModule({
   imports: [
     CommonModule,

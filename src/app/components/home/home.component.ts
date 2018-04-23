@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { InlineSVGModule } from 'ng-inline-svg';
+
 
 
 @Component({
@@ -16,13 +16,16 @@ export class HomeComponent implements OnInit {
     isLoading: boolean;
     svg: SafeHtml;
     visible = false;
+    hoveredCounty: string;
+    el: any;
 
-    constructor(private sanitizer: DomSanitizer) { }
+    constructor() { }
 
-
+    mouseEnter(el) {
+        this.hoveredCounty = el.target.getAttribute('name');
+    }
 
     ngOnInit() {
         this.isLoading = true;
-        this.svg = this.sanitizer.bypassSecurityTrustHtml("SVG CONTENT");
     }
 }

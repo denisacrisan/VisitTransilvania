@@ -2,6 +2,16 @@
   width: 100px;
 }
 
+svg {
+  height: auto;
+}
+
+.romaniaMap {
+  max-width: 100%;
+  padding: 0 10%;
+  height: auto;
+}
+
 q {
   font-style: italic;
   font-size: 1.2rem;
@@ -136,3 +146,24 @@ q {
   background: rgba(135,206,250,0.1);
   padding: 30px 0;
 }
+
+.mm {
+  width: 90%;
+  margin-top: 2%;
+  height: 300px;
+}
+
+.image-wrapper {
+  padding: 0px 7px;
+  background: rgba(143,211,153,0.3);
+  margin-right: 12.5%;
+  margin-top: 2%;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.caption {
+  font-size: 13px;
+}
+
